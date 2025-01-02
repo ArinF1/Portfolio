@@ -1,6 +1,15 @@
 import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
+import reactJsxPlugin from '@vitejs/plugin-react';
 
 export default defineConfig({
-  plugins: [react()],
+    plugins: [
+        reactJsxPlugin(),
+    ],
+    server: {
+        port: 8080,
+    },
+    build: {
+        sourcemap: true,
+        minify: false
+    }
 });
